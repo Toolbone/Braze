@@ -5,8 +5,10 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
+import com.appboy.Appboy
 
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,8 +18,21 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+
+            val userId = txtInput.text.toString()
+            if (userId.isEmpty()) {
+
+                Snackbar.make(view, "User Id should not be null or empty. Doing nothing.", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
+
+            } else {
+                Snackbar.make(view, String.format("Changed user to %s and requested flush to Appboy", userId), Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+                Appboy.getInstance(applicationContext).changeUser(userId)
+            }
+
+            Appboy.getInstance(applicationContext).requestImmediateDataFlush()
+
         }
     }
 

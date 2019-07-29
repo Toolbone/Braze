@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "391059302862",
+    "firebase_url": "https://braze-integration-77714.firebaseio.com",
+    "project_id": "braze-integration-77714",
+    "storage_bucket": "braze-integration-77714.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391059302862:android:d137571bec52b836",
+        "android_client_info": {
+          "package_name": "com.toolbone.braze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391059302862-2i32qkdpatgp22i313n8anji7dsig76r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8VZH42urkuKTljhIdU5vNxD0btSKdL2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391059302862-2i32qkdpatgp22i313n8anji7dsig76r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

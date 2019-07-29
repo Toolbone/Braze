@@ -21,6 +21,8 @@ class BaseApplication : Application(){
         Appboy.configure(this, appboyConfig.build())
 
         registerActivityLifecycleCallbacks(AppboyLifecycleCallbackListener())
+        //registerActivityLifecycleCallbacks(AppboyLifecycleCallbackListener(sessionHandlingEnabled, inAppMessagingRegistrationEnabled))
+
     }
 
 }
